@@ -26,10 +26,9 @@ async function type(node, text, sleep_interval) {
     }
 }
 
-// responses taken from https://en.wikipedia.org/wiki/Steve_Jobs
 // responses will simply be cycled through
 let responses = [
-    // response 1
+    // Tell me about Steve Jobs: https://en.wikipedia.org/wiki/Steve_Jobs
     "Jobs was born in San Francisco to a Syrian father and German-American mother. \
     He was adopted shortly after his birth. Jobs attended Reed College in 1972 before \
     withdrawing that same year. In 1974, he traveled through India seeking \
@@ -44,21 +43,30 @@ let responses = [
     1985 with the addition of the Apple LaserWriter, the first laser printer to feature \
     vector graphics.",
     
-    // response 2
-    "In 1985, Jobs was forced out of Apple after a long power struggle with the company's \
-    board and its then-CEO, John Sculley. That same year, Jobs took a few Apple employees \
-    with him to found NeXT, a computer platform development company that specialized in \
-    computers for higher-education and business markets. In addition, he helped to \
-    develop the visual effects industry when he funded the computer graphics division \
-    of George Lucas's Lucasfilm in 1986. The new company was Pixar, which produced the \
-    first 3D computer-animated feature film Toy Story (1995) and went on to become a major \
-    animation studio, producing over 25 films since.",
+    // Tell me about Albert Einstein: https://en.wikipedia.org/wiki/Albert_Einstein
+    "Albert Einstein ( 14 March 1879 - 18 April 1955) was a German-born theoretical\
+    physicist, widely acknowledged to be one of the greatest and most influential \
+    physicists of all time. Einstein is best known for developing the theory of \
+    relativity, but he also made important contributions to the development of \
+    the theory of quantum mechanics. Relativity and quantum mechanics are the two \
+    pillars of modern physics. His mass-energy equivalence formula E = mc2, which \
+    arises from relativity theory, has been dubbed \"the world's most famous equation\". \
+    His work is also known for its influence on the philosophy of science. He received \
+    the 1921 Nobel Prize in Physics \"for his services to theoretical physics, and \
+    especially for his discovery of the law of the photoelectric effect\", a pivotal \
+    step in the development of quantum theory. His intellectual achievements and originality \
+    resulted in \"Einstein\" becoming synonymous with \"genius\". Einsteinium, one \
+    of the synthetic elements in the periodic table, was named in his honor.",
 
-    // response 3
-    "Schieble became pregnant with Jobs in 1954, when she and Jandali spent the summer \
-    with his family in Homs. According to Jandali, Schieble deliberately did not involve \
-    him in the process: \"Without telling me, Joanne upped and left to move to San Francisco \
-    to have the baby without anyone knowing, including me\"",
+    // Tell me about Winston Churchill: https://en.wikipedia.org/wiki/Winston_Churchill
+    "Sir Winston Leonard Spencer Churchill (30 November 1874 - 24 January 1965) was \
+    a British statesman, soldier, and writer who served as Prime Minister of the \
+    United Kingdom twice, from 1940 to 1945 during the Second World War, and again \
+    from 1951 to 1955. Apart from two years between 1922 and 1924, he was a Member \
+    of Parliament (MP) from 1900 to 1964 and represented a total of five constituencies. \
+    Ideologically an economic liberal and imperialist, he was for most of his career \
+    a member of the Conservative Party, which he led from 1940 to 1955. He was a \
+    member of the Liberal Party from 1904 to 1924.",
 ]
 
 let counter = 0;
