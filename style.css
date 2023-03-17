@@ -1,0 +1,19 @@
+.prompt-text {
+    color: #aaa;
+}
+
+.response-text {
+    color: #333;
+}
+
+.response-hlight {
+    color: #22f;
+    font-weight: 700;
+}
+
+.scroller {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 500px;
+    overflow-y: auto;
+}
