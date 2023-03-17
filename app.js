@@ -26,6 +26,15 @@ async function type(node, text, sleep_interval) {
     }
 }
 
+function chat(promptID, response, delay) {
+    let promptText = capturePromptText(promptID);
+    let prompt = createConversationRow(promptText, true);
+    let resp = createConversationRow("", false);
+    convWindow.appendChild(prompt.row);
+    convWindow.appendChild(resp.row);
+    type(resp.paragraph, response, delay);
+}
+
 // responses will simply be cycled through
 let responses = [
     // Tell me about Steve Jobs: https://en.wikipedia.org/wiki/Steve_Jobs
@@ -70,19 +79,16 @@ let responses = [
 ]
 
 let counter = 0;
-
 const convWindow = document.getElementById("conversation-window");
 const delayRange = document.getElementById("text-delay");
 
 addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
-        let promptText = capturePromptText("prompt");
-        let prompt = createConversationRow(promptText, true);
-        let resp = createConversationRow("", false);
-        convWindow.appendChild(prompt.row);
-        convWindow.appendChild(resp.row);
-        type(resp.paragraph, responses[counter % responses.length], delayRange.value);
-
+        chat("prompt", responses[counter % responses.length], delayRange.value);
         counter++;
     }
 })
+document.getElementById("go").onclick = function() {
+    chat("prompt", responses[counter % responses.length], delayRange.value);
+    counter++;
+}
