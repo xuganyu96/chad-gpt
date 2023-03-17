@@ -1,2 +1,2 @@
-# typewriter-js
-HTML/CSS/JS for a ChatGPT clone
+# ChadGPT
+A mockup of ChatGPT
